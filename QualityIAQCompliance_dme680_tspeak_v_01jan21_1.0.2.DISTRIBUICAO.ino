@@ -41,18 +41,13 @@ char endereco_api_thingspeak[] = "api.thingspeak.com";                          
 String chave_escrita_thingspeak = "XXXXXXXXXXXXXXXXX";                                    /* Coloque aqui sua chave de escrita do seu canal */
 unsigned long last_connection_time;
 WiFiClient client;
-// DHT dht(DHTPIN, DHTTYPE);
  
-/* prototypes */
-void envia_informacoes_thingspeak(String string_dados);
+
+void envia_informacoes_thingspeak(String string_dados);                          /* o show acontecendo */
 void init_wifi(void);
 void conecta_wifi(void);
 void verifica_conexao_wifi(void);
- 
-                                                                                  /*
-                                                                                  * Implementações
-                                                                                  */
-                                                                                   
+                                                                                                                                                                     
                                                                                   /* Função: envia informações ao ThingSpeak
                                                                                   * Parâmetros: String com a informação a ser enviada
                                                                                   * Retorno: nenhum
@@ -146,7 +141,7 @@ void setup()
   bme.setPressureOversampling(BME680_OS_4X);
   bme.setIIRFilterSize(BME680_FILTER_SIZE_3);
   bme.setGasHeater(320, 150);                                               /*320°C para 150 ms*/ 
-                                                                            /*// Agora execute o sensor para normalizar as leituras e, em seguida, use a combinação
+                                                                            /* Agora execute o sensor para normalizar as leituras e, em seguida, use a combinação
                                                                              * de umidade relativa e resistência do gás para estimar a qualidade do ar interno como uma porcentagem.
                                                                             */
   
