@@ -9,7 +9,7 @@
  *  profissionais, rango, redbull)}
  *  programador normal - faz isso em pouca horas de mãos amarradas, ou seja, 1/10 do tempo e recursos
  *  meta: reduzir o código para 20 linhas usando OO programação orientada a objetos e bibliotecasa TS para arduino
- *  versão 1.0.0
+ *  versão 1.0.2
  */
 
 
