@@ -2,10 +2,13 @@
  * indice de qualidade do ar. 
  * este programa serve como base de dados para outros dispositivos atuarem e controlarem sistemas de climatização/refrigeraço e ventialação
  *  
- *  referencias: Adafruit, Arduino, Bosh sensores
+ *  referencias: Adafruit, Arduino, Bosh, https://github.com/G6EJD
  *  
  *  by zeh sobrinho jan 2021
- *  
+ *  gastos: R$1000,00 - peças, tempo {(cinco dias batendo cabeça e correndo na santa efigência, cara pra caralho, mas faz toda diferença conversar com bons
+ *  profissionais, rango, redbull)}
+ *  programador normal - faz isso em pouca horas de mãos amarradas, ou seja, 1/10 do tempo e recursos
+ *  meta: reduzir o código para 20 linhas usando OO programação orientada a objetos e bibliotecasa TS para arduino
  *  versão 1.0.0
  */
 
@@ -28,14 +31,14 @@ int   getgasreference_count = 0;
 int   gas_lower_limit = 10000;                                                            /*Qualidade do ar ruim*/ 
 int   gas_upper_limit = 300000;                                                           /*Bom limite de qualidade do ar*/ 
 
-#define SSID_REDE "ISG-CONVIDADOS"                                                        /* rede de dados wifi residencial ou corporatia */
-#define SENHA_REDE "bemvindo@isg#"                                                        /* coloque aqui a senha da rede que se deseja conectar */
+#define SSID_REDE "xxxxxxxxxxxxxx"                                                        /* rede de dados wifi residencial ou corporatia */
+#define SENHA_REDE "xxxxxxxxxxxxx"                                                        /* coloque aqui a senha da rede que se deseja conectar */
 #define INTERVALO_ENVIO_THINGSPEAK 30000                                                  /* intervalo entre envios de dados ao ThingSpeak (em ms) */
  
  
 
 char endereco_api_thingspeak[] = "api.thingspeak.com";                                    /* constantes e variáveis globais */
-String chave_escrita_thingspeak = "K47WJ5JX94H5GY0A";                                     /* Coloque aqui sua chave de escrita do seu canal */
+String chave_escrita_thingspeak = "XXXXXXXXXXXXXXXXX";                                    /* Coloque aqui sua chave de escrita do seu canal */
 unsigned long last_connection_time;
 WiFiClient client;
 // DHT dht(DHTPIN, DHTTYPE);
